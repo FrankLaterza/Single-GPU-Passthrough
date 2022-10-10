@@ -46,7 +46,7 @@ Make sure to reboot and check that your system booted with the new options with 
 sudo cat /proc/cmdline
 ```
 
-## check that iommu is valid
+## Check that iommu is valid
 
 To see if iommu is working run below.
 ```
