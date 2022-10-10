@@ -1,6 +1,6 @@
 
 # Single GPU Passthrough
-Welcome to my guide on setting up a virtual machine with GPU passthrough with only a single graphics card. This guide was made along side this youtube tutorial [here](https://youtu.be/UOk5Mzu53lI). If you get stuck anywhere along the way please check out this guide [here](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/1)-Preparations) for more information. What are you waiting for? Switch to linux!!
+Welcome to my guide on setting up a virtual machine with GPU passthrough with only a single graphics card. This guide was made along side this youtube tutorial [here](https://youtu.be/UOk5Mzu53lI). If you get stuck anywhere along the way please check out this guide [here](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/home) for more information. What are you waiting for? Switch to linux!!
 ### My specs 
 amd cpu <br />
 nvidia graphics card
