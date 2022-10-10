@@ -2,17 +2,17 @@
 # Single GPU Passthrough
 Welcome to my guide on setting up a virtual machine with GPU passthrough with only a single graphics card. This guide was made along side this youtube tutorial [here](https://youtu.be/UOk5Mzu53lI). If you get stuck anywhere along the way please check out this guide [here](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/home) for more information. What are you waiting for? Switch to linux!!
 ### My specs 
-amd cpu <br />
-nvidia graphics card
+Amd cpu <br />
+Nvidia graphics card
 
 ## Preparations
 
 ### Bois Settings 
-virtualization is enabled <br />
-iommu is enable <br />
-secure boot is disabled before install <br /> 
+Virtualization is enabled <br />
+Iommu is enable <br />
+Secure boot is disabled before install <br /> 
 
-your os needs to be installed in UEFI mode run the command below to check
+Your os needs to be installed in UEFI mode run the command below to check
 ```
 [ -d /sys/firmware/efi ] && echo "Installed in UEFI mode" || echo "Installed in Legacy mode"
 ```
@@ -20,7 +20,7 @@ your os needs to be installed in UEFI mode run the command below to check
 ## Edit Boot Options
 Normaly you would change the grub for boot options, but popos doesn't use grub. so you need to change the boot optoins with kernalstub
 
-### change boot options
+### Change boot options
 
 #### For Amd:
 ```
