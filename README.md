@@ -1,8 +1,8 @@
 
 # Single GPU Passthrough
 Welcome to my guide on setting up a virtual machine with GPU passthrough with only a single graphics card. This guide was made along side this youtube tutorial [here](https://youtu.be/UOk5Mzu53lI). If you get stuck anywhere along the way please check out this guide [here](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/1)-Preparations) for more information. What are you waiting for? Switch to linux!!
-### my specs 
-amd cpu
+### My specs 
+amd cpu <br />
 nvidia graphics card
 
 ## Preparations
@@ -36,7 +36,9 @@ sudo cat /etc/kernelstub/configuration
 You should see the new boot options that we placed in there.
 
 Make sure to reboot and check that your system booted with the new options with the command below.
+```
 sudo cat /proc/cmdline
+```
 
 ## check that iommu is valid
 
@@ -44,7 +46,9 @@ To see if iommu is working run below.
 sudo dmesg | grep IOMMU
 
 Now run the command below to check what pci slot your grapics card is in.
+```
 lspci
+```
 
 Now you want to check your iommu grouping. Run the script in this repository label check_iommu_group.sh to see the grouping. You want to make sure that it matches with your pci slots. Make sure this executable as well. 
 
