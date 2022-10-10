@@ -1,6 +1,6 @@
 
 # Single GPU Passthrough
-Welcome to my guide on setting up a virtual machine with GPU passthrough with only a single graphics card. This guide was made along side this youtube tutorial here. If you get stuck anywhere along the way please check out this guide here for more information. What are you waiting for? Switch to linux!!
+Welcome to my guide on setting up a virtual machine with GPU passthrough with only a single graphics card. This guide was made along side this youtube tutorial [here](https://youtu.be/UOk5Mzu53lI). If you get stuck anywhere along the way please check out this guide [here](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/1)-Preparations) for more information. What are you waiting for? Switch to linux!!
 ### my specs 
 amd cpu
 nvidia graphics card
@@ -8,10 +8,9 @@ nvidia graphics card
 ## Preparations
 
 ### Bois Settings 
-virtualization is enabled
-iommu is enable
-secure boot is disabled before instal
-
+virtualization is enabled <br />
+iommu is enable <br />
+secure boot is disabled before install <br /> 
 
 your os needs to be installed in UEFI mode run the command below to check
 [ -d /sys/firmware/efi ] && echo "Installed in UEFI mode" || echo "Installed in Legacy mode"
@@ -34,7 +33,7 @@ You can check if this was done correctly by checking the file below
 
 sudo cat /etc/kernelstub/configuration
 
-You should see the new boot options that we placed in there
+You should see the new boot options that we placed in there.
 
 Make sure to reboot and check that your system booted with the new options with the command below.
 sudo cat /proc/cmdline
@@ -49,22 +48,22 @@ lspci
 
 Now you want to check your iommu grouping. Run the script in this repository label check_iommu_group.sh to see the grouping. You want to make sure that it matches with your pci slots. Make sure this executable as well. 
 
-MAKE SURE TO CREATE THE SCRIPT!!
+MAKE SURE TO CREATE THE SCRIPT!!!
 run with
 sudo ./check_iommu_group.sh
 
 # Set Up Libvirt
 
 This command will install virtual machine manger and libvert things
-sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf
+```sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf```
 
 Once installed we need to edit the libvirt conf file
-sudo nano /etc/libvirt/libvirtd.conf
+```sudo nano /etc/libvirt/libvirtd.conf```
 
 Next find and uncomment the following lines 
 
-unix_sock_group = "libvirt"
-unix_sock_rw_perms = "0770"
+```unix_sock_group = "libvirt"```
+```unix_sock_rw_perms = "0770"```
 
 Make sure this is at the end of the file (helps with logs)
 log_filters="1:qemu"
