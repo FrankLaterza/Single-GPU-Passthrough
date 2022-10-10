@@ -89,7 +89,7 @@ log_filters="1:qemu"
 log_outputs="1:file:/var/log/libvirt/libvirtd.log"
 ```
 ### Give Permissions
-run the following to give your user the proper premissions
+Run the following to give your user the proper premissions
 
 ```
 sudo usermod -a -G libvirt $(whoami)
@@ -100,12 +100,12 @@ Check with
 ```
 sudo groups $(whoami)
 ```
-should show that you are in the group
+Should show that you are in the group
 
 
 ### Change The Qemu Conf
 
-run the following below to edit the qemu file
+Run the following below to edit the qemu file
 ```
 sudo nano /etc/libvirt/qemu.conf
 ```
@@ -148,7 +148,7 @@ check the log files
 sudo cat /var/log/libvirt/qemu/win10.log 
 ```
 
-make sure to set up an ssh and vnc 
+Make sure to set up an ssh and vnc 
 
-launch and test!
-good luck
+Launch and test!
+Good luck
